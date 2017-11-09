@@ -1,9 +1,13 @@
 /**
  * 
  */
-package interfaceslocal;
+package interfacesremote;
+
+
 
 import java.util.List;
+
+import javax.ejb.Remote;
 
 import entities.Unit;
 
@@ -11,8 +15,8 @@ import entities.Unit;
  * @author Vincent RICHAUD
  *
  */
-@Local
-public interface UnitInterfaceLocal {
+@Remote
+public interface UnitItfRemote {
 
 	public Unit createUnit(Unit unit);
 	

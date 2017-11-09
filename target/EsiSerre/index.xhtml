@@ -1,0 +1,36 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	>
+	
+	<h:head>
+	
+	
+	</h:head>
+	
+	<h:body>
+		<h:outputText value="Hello!" />
+		<h:form>
+		
+			<h:outputText value="Titre :"/>
+			<h:inputText value="#{testController.unit.name}"/>
+			<h:commandButton value="Ajouter" action="#{testController.addUnit()}"/>
+			
+		</h:form>
+		<h:dataTable value="#{testController.units}" var="itUnit">
+			
+			<h:column>
+				<f:facet name="header">idUnit</f:facet>
+				<h:outputText value="#{itUnit.idUnit}" />
+			</h:column>
+		
+			<h:column>
+				<f:facet name="header">Name</f:facet>
+				<h:outputText value="#{itUnit.name}" />
+			</h:column>
+		</h:dataTable>
+		
+		
+	</h:body>	
+	
+</html>

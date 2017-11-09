@@ -25,6 +25,13 @@ public class Unit implements Serializable {
 	/**
 	 * 
 	 */
+	public Unit() {
+		super();
+	}
+
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = -8247787855280353643L;
 
 	/**

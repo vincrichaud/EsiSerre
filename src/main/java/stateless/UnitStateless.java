@@ -5,20 +5,21 @@ package stateless;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import entities.Unit;
-import interfaceslocal.UnitInterfaceLocal;
-import interfacesremote.UnitInterfaceRemote;
+import interfaceslocal.UnitItfLocal;
+import interfacesremote.UnitItfRemote;
 
 /**
  * @author Vincent RICHAUD
  *
  */
 @Stateless
-public class UnitStateless implements UnitInterfaceLocal, UnitInterfaceRemote {
+public class UnitStateless implements UnitItfLocal, UnitItfRemote {
 
 	@PersistenceContext(unitName = "primary")
 	private EntityManager em;
